@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        var won=0;
+var lost=0;
+var tie=0;
+
+for(var i=0 ; i<10 ; i ++){
+
+
+
+
+
+    let yourChoice=prompt(" Rock, Paper or Scissors -Just write 'r' 'p' 's'  " );
+    let num=Math.random();
+ 
+    let compChoice;
+
+    if(num>0.66){
+      compChoice="r";
+
+    }else if(num>0.33){
+        compChoice="p"
+    }else{
+        compChoice="s";
+    }
+
+    alert("your choice :" + yourChoice);
+    alert("comp choice :" +compChoice);
+
+if(compChoice==yourChoice){
+    alert("The result is a tie!")
+    
+  tie ++;
+  yourChoice="y";
+}
+
+if(yourChoice=="r"){
+    if(compChoice=="p"){
+        alert("you lost !");
+        lost ++;
+    }
+    else {
+        alert("you won !");
+        won ++;
+    }
+}
+
+
+if(yourChoice=="s"){
+    if(compChoice=="p"){
+        alert("you won !");
+        won ++;    }
+    else {
+        alert("you lost !")
+        lost ++;
+    }
+}
+
+if(yourChoice=="p"){
+    if(compChoice=="r"){
+        alert("you won !")
+        won ++;
+    }
+    else {
+        alert("you lost !")
+        lost ++;
+    }
+}
+
+
+}
+
+alert("you won "+ won +" times" + " ;" + " lost "+ lost + " times" + "tie "+ tie +" times");
+
+
+    </script>
+</body>
+</html>
